@@ -3,7 +3,8 @@
   import { ref } from 'vue';
 
   import TheCameraRig from './TheCameraRig.vue';
-  import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
+import TheJungle from './TheJungle.vue';
+  //import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
  // import '../aframe/pavageCarre.js';
 
   defineProps({
@@ -48,7 +49,12 @@ const allAssetsLoaded = ref(false);
 
 <template>
   <a-scene stats background="color: #a3d0ed" fog="type: linear; color: #a3d0ed; near: 30; far: 60" @click="handleClick">
-    
+
+    <a-assets  @loaded="allAssetsLoaded = true">
+      <a-asset-item id="jungle" src="assets/jungle_cabin.glb"></a-asset-item>
+    </a-assets>
+
+   
     <!--   <a-ocean depth="100" width="100" amplitude="0" amplitude-variance="0.1" opacity="1" density="50" ></a-ocean>
       <a-ocean depth="100" width="100" opacity="0.5" amplitude="0" amplitude-variance="0.15" density="50" ></a-ocean>
       <a-entity light="type: ambient; color: #326b80"></a-entity>
@@ -89,6 +95,10 @@ const allAssetsLoaded = ref(false);
     <!-- Quatrième groupe de bâtons (1 bâton) -->
     <a-box id="baton10" position="6.5 1.5 0" width="0.1" height="3" depth="0.1" color="black" clickable></a-box>
     
+    <template v-if="allAssetsLoaded">
+      <TheJungle :scale="scale" />
+      
+    </template>
     <TheCameraRig />
 
   </a-scene>
