@@ -51,7 +51,7 @@ const allAssetsLoaded = ref(false);
   <a-scene stats background="color: #a3d0ed" fog="type: linear; color: #a3d0ed; near: 30; far: 60" @click="handleClick">
 
     <a-assets  @loaded="allAssetsLoaded = true">
-      <a-asset-item id="jungle" src="assets/jungle_cabin.glb"></a-asset-item>
+      <a-asset-item id="jungle" src="assets/jungleMap.glb"></a-asset-item>
     </a-assets>
 
    
