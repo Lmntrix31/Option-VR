@@ -3,9 +3,9 @@ AFRAME.registerComponent('batongame', {
     // Variable pour stocker l'ID du bâton actuellement « tenu »
     this.currentHeldBatonId = null;
     this.congratulationsDisplayed = false; // Pour éviter l'affichage répété du message de félicitations
-
+    this.handleClick = this.handleClick.bind(this)
     // Création des bâtons et des espaces invisibles
-    const sceneEl = document.querySelector('a-scene');
+    const sceneEl = this.el.sceneEl;
 
     // Positions et nombres de bâtons dans chaque groupe
     const batonGroups = [
@@ -31,7 +31,7 @@ AFRAME.registerComponent('batongame', {
         batonEl.setAttribute('color', 'black');
         batonEl.setAttribute('clickable', ''); // Rendre les bâtons cliquables
         sceneEl.appendChild(batonEl);
-
+        batonEl.addEventListener('click', () => this.handleClick(batonEl));
         positionX += 1;
       }
 
@@ -47,38 +47,44 @@ AFRAME.registerComponent('batongame', {
       emptySpaceEl.setAttribute('visible', group.visible.toString());
       emptySpaceEl.setAttribute('clickable', ''); // Rendre les espaces vides cliquables
       sceneEl.appendChild(emptySpaceEl);
+      emptySpaceEl.addEventListener('click', () => this.handleClick(emptySpaceEl));
 
       positionX += 1; // Espacement entre les groupes de bâtons
     });
 
     // Ajouter l'événement de clic au composant A-Frame lui-même
-    this.el.addEventListener('click', this.handleClick.bind(this));
+    // this.el.addEventListener('click', this.handleClick.bind(this));
   },
 
-  handleClick: function (event) {
-    if (event.detail.intersection) {
-      const clickedElement = event.detail.intersection.object.el;
-
+  handleClick: function (clickedElement) {
+    console.log('handleClick');        
       // Si aucun bâton n'est actuellement sélectionné
       if (!this.currentHeldBatonId) {
         // Si l'élément cliqué est un bâton et qu'il est cliquable
         if (clickedElement.tagName === 'A-BOX' && clickedElement.getAttribute('clickable') !== null) {
           // Cacher le bâton sélectionné
-          clickedElement.setAttribute('visible', 'false');
+          //clickedElement.setAttribute('visible', 'false');
+          // le baton devient un espace vide
+          clickedElement.setAttribute('color', '#a3d0ed');
           // Stocker l'ID du bâton sélectionné
           this.currentHeldBatonId = clickedElement.id;
         }
       } else {
+        
         // Si l'élément cliqué est un espace vide
         if (clickedElement.getAttribute('color') === '#a3d0ed') {
-          // Récupérer l'ID de l'espace vide cliqué
+                   
+         // Récupérer l'ID de l'espace vide cliqué
+
           const emptySpaceId = clickedElement.id;
+
           // Récupérer le bâton sélectionné
           const baton = document.getElementById(this.currentHeldBatonId);
           // Déplacer le bâton vers l'espace vide
           baton.setAttribute('position', clickedElement.getAttribute('position'));
-          // Afficher le bâton dans l'espace vide
-          baton.setAttribute('visible', 'true');
+          // Afficher le bâton dans l'espace vide dans la couleur du bâton 
+          clickedElement.setAttribute('color', 'black');
+          //baton.setAttribute('visible', 'true');
           // Réinitialiser l'ID du bâton sélectionné
           this.currentHeldBatonId = null;
 
@@ -92,8 +98,7 @@ AFRAME.registerComponent('batongame', {
               // Ajouter ici le code pour afficher le message de félicitations à l'utilisateur
             }
           }
-        }
+        }      
       }
-    }
   }
 });
