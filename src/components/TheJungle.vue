@@ -15,11 +15,12 @@
   <a-entity
       id="jungle"
       gltf-model="#jungle"
-      position="0 -1.6 0"
+      position="0 -0.968 0"
       scale="1 1 1"
       listen-to="target: a-scene; event: enter-scene; emit: play-sound;"
       sound="src: #sound; positional: false; on: play-sound; loop: true;"
-    ></a-entity>
+      sound__2="src: #sound-2; positional: false; on: play-sound; delay: 10000; volume: 0.2; loop: true;"
+      ></a-entity>
 
     
 

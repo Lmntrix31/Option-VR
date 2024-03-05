@@ -69,25 +69,137 @@
           </dd>
 
           <dt>
-            <a href=" https://github.com/AdaRoseCannon/aframe-xr-boilerplate" target="_blank">simple-navmesh-constraint</a>
+            <a href="https://sketchfab.com/3d-models/ancient-pyramid-056c158eacc244b599ff28fde66e08a0" target="_blank">Ancient Pyramid
+</a>
           </dt><dd>
-            By Ada Rose Cannon under MIT License
-          </dd>
-
-          <dt>
-            <a href="https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e" target="_blank">VR Gallery</a>
-          </dt><dd>
-            by <a href="https://sketchfab.com/mvrc.art" target="_blank">Maxim Mavrichev</a>
+            by <a href="https://sketchfab.com/thunderpwn" target="_blank">Thunder</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1" target="_blank">Physic room model</a>
+            <a href="https://sketchfab.com/3d-models/jungle-temple-pillar-cd98e49ca5074a9eaabc41d21abdcc77" target="_blank">Jungle Temple Pillar
+</a>
           </dt><dd>
-            by <a href="https://sketchfab.com/tekuto1s" target="_blank">tekuto1s</a>
+            by <a href="https://sketchfab.com/demondragon48" target="_blank">Matías Mellado</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/pj-king-kong-2005-1791fb6dad1a479d92251df2cbede920" target="_blank">PJ King Kong 2005
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/CGreature" target="_blank">CGreature</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+          
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/jungle-vine-d8a2da241a1b4ce9aa8c528240fc92b2" target="_blank">Jungle Vine
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/mike753" target="_blank">mike753</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/jungle-temple-b55c572b0c90434f9b6097f281ddb2c2" target="_blank">Jungle Temple
+
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/thunderpwn" target="_blank">Thunder</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/jungle-cabin-13cb9510bca9486492107d9df3b67f27" target="_blank">Jungle Cabin
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/shuvalan" target="_blank">shuvalan</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          
+          <dt>
+            <a href="https://www.cgtrader.com/free-3d-models/plant/other/low-poly-forest-pack-f02e240d-8646-4b91-bd3d-731101f35f90" target="_blank">low poly forest pack Free low-poly 3D model
+
+</a>
+          </dt><dd>
+            by <a href="https://www.cgtrader.com/designers/genctasarimci" target="_blank">YOUNG DESİGNER
+</a>
+            under <a href="https://www.cgtrader.com/pages/terms-and-conditions#general-terms-of-licensing" target="_blank">General Terms and Conditions
+</a>
+          </dd>
+
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/stylized-tree-843278c62cb9494bafda67e7c14c5707" target="_blank">Stylized Tree
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/CocoJinjo" target="_blank">Coco Jinjo</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+             
+          <dt>
+            <a href="https://sketchfab.com/3d-models/machete-lowpoly-426caebd84a74fe9993bc8b0cbe6ada4" target="_blank">Machete Lowpoly
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/mrjarack" target="_blank">mrjarack</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+             
+          <dt>
+            <a href="https://sketchfab.com/3d-models/firepit-049a818ed2fe456fb36008260a27c1e9" target="_blank">Firepit
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/pantherone" target="_blank">Anthony V.</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/rope-fence-462e970561664ff9a98de84dfb24d8bf" target="_blank">Rope Fence
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/pantherone" target="_blank">Anthony V.</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/arco-08c6c48fb61a4a2fa711a276be4ec048" target="_blank">Arco
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/franciscopioner" target="_blank">Francisco Fischer Pioner</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/tent-4bb901d9c7fd4ac7a5a02e383361d3cd" target="_blank">Tent
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/hildegunstdermythenmetz" target="_blank">hildegunstdermythenmetz</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/walkway-stones-3268b9e74f73498fa93912922bc4df73" target="_blank">Walkway Stones
+
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/thunderpwn" target="_blank">Thunder</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
         </dl>
       </div>
     </div>

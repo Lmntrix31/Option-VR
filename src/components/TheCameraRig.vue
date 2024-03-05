@@ -22,7 +22,7 @@
         position="0 1.65 0"
       >
         <a-entity
-          geometry="primitive: circle; radius: 0.0003;"
+          geometry="primitive: circle; radius: 0.001;"
           material="shader: flat; color: white;"
           cursor
           raycaster="far: 4; objects: [clickable]; showLine: false;"
