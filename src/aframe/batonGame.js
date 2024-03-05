@@ -1,18 +1,21 @@
 AFRAME.registerComponent('batongame', {
   init: function () {
-    // Variable pour stocker l'ID du bâton actuellement « tenu »
-    this.currentHeldBatonId = null;
+    // Variable pour stocker l'élément du bâton actuellement sélectionné
+    this.currentHeldBaton = null;
     this.congratulationsDisplayed = false; // Pour éviter l'affichage répété du message de félicitations
-    this.handleClick = this.handleClick.bind(this)
+    this.handleClick = this.handleClick.bind(this);
     // Création des bâtons et des espaces invisibles
     const sceneEl = this.el.sceneEl;
 
     // Positions et nombres de bâtons dans chaque groupe
     const batonGroups = [
       { numBaton: 4, visible: true },
+      { numBaton: 1, visible: false },
       { numBaton: 3, visible: true },
+      { numBaton: 1, visible: false },
       { numBaton: 2, visible: true },
-      { numBaton: 1, visible: false }
+      { numBaton: 1, visible: false },
+      { numBaton: 1, visible: true }
     ];
 
     let positionX = -5.5;
@@ -28,28 +31,16 @@ AFRAME.registerComponent('batongame', {
         batonEl.setAttribute('width', '0.1');
         batonEl.setAttribute('height', '3');
         batonEl.setAttribute('depth', '0.1');
-        batonEl.setAttribute('color', 'black');
+        batonEl.setAttribute('color', group.visible ? 'black' : '#a3d0ed');
+        batonEl.setAttribute('opacity', group.visible ? 1 : 0.1); // Réglez l'opacité en fonction de la visibilité
         batonEl.setAttribute('clickable', ''); // Rendre les bâtons cliquables
         sceneEl.appendChild(batonEl);
         batonEl.addEventListener('click', () => this.handleClick(batonEl));
         positionX += 1;
       }
 
-      // Créer un espace invisible après chaque groupe de bâtons
-      const emptySpaceId = `espace${groupIndex + 1}`;
-      const emptySpaceEl = document.createElement('a-box');
-      emptySpaceEl.setAttribute('id', emptySpaceId);
-      emptySpaceEl.setAttribute('position', `${positionX} 1.5 0`);
-      emptySpaceEl.setAttribute('width', '0.1');
-      emptySpaceEl.setAttribute('height', '3');
-      emptySpaceEl.setAttribute('depth', '0.1');
-      emptySpaceEl.setAttribute('color', '#a3d0ed');
-      emptySpaceEl.setAttribute('visible', group.visible.toString());
-      emptySpaceEl.setAttribute('clickable', ''); // Rendre les espaces vides cliquables
-      sceneEl.appendChild(emptySpaceEl);
-      emptySpaceEl.addEventListener('click', () => this.handleClick(emptySpaceEl));
-
-      positionX += 1; // Espacement entre les groupes de bâtons
+      // Espacement différent entre les groupes de bâtons
+      positionX += group.visible ? -0.3 : -0.3;
     });
 
     // Ajouter l'événement de clic au composant A-Frame lui-même
@@ -57,48 +48,27 @@ AFRAME.registerComponent('batongame', {
   },
 
   handleClick: function (clickedElement) {
-    console.log('handleClick');        
-      // Si aucun bâton n'est actuellement sélectionné
-      if (!this.currentHeldBatonId) {
-        // Si l'élément cliqué est un bâton et qu'il est cliquable
-        if (clickedElement.tagName === 'A-BOX' && clickedElement.getAttribute('clickable') !== null) {
-          // Cacher le bâton sélectionné
-          //clickedElement.setAttribute('visible', 'false');
-          // le baton devient un espace vide
-          clickedElement.setAttribute('color', '#a3d0ed');
-          // Stocker l'ID du bâton sélectionné
-          this.currentHeldBatonId = clickedElement.id;
-        }
-      } else {
-        
-        // Si l'élément cliqué est un espace vide
-        if (clickedElement.getAttribute('color') === '#a3d0ed') {
-                   
-         // Récupérer l'ID de l'espace vide cliqué
-
-          const emptySpaceId = clickedElement.id;
-
-          // Récupérer le bâton sélectionné
-          const baton = document.getElementById(this.currentHeldBatonId);
-          // Déplacer le bâton vers l'espace vide
-          baton.setAttribute('position', clickedElement.getAttribute('position'));
-          // Afficher le bâton dans l'espace vide dans la couleur du bâton 
-          clickedElement.setAttribute('color', 'black');
-          //baton.setAttribute('visible', 'true');
-          // Réinitialiser l'ID du bâton sélectionné
-          this.currentHeldBatonId = null;
-
-          // Vérifier si le bâton numéro deux est dans l'espace trois
-          const baton2 = document.getElementById('baton2');
-          const espace3 = document.getElementById('espace3');
-          if (baton2.getAttribute('position').x === espace3.getAttribute('position').x) {
-            if (!this.congratulationsDisplayed) {
-              console.log("Bravo! Vous avez placé le bâton numéro deux dans l'espace trois.");
-              this.congratulationsDisplayed = true;
-              // Ajouter ici le code pour afficher le message de félicitations à l'utilisateur
-            }
-          }
-        }      
+    console.log('handleClick');
+    // Si l'élément cliqué est un bâton et qu'il est cliquable
+    if (clickedElement.tagName === 'A-BOX' && clickedElement.getAttribute('clickable') !== null) {
+      // Si le bâton cliqué est déjà sélectionné, le rendre visible en noir
+      if (this.currentHeldBaton === clickedElement) {
+        clickedElement.setAttribute('color', 'black');
+        clickedElement.setAttribute('opacity', 1);
+        this.currentHeldBaton = null;
+      } else if (this.currentHeldBaton) {
+        // Si un autre bâton est déjà sélectionné, le rendre visible en noir
+        this.currentHeldBaton.setAttribute('color', 'black');
+        this.currentHeldBaton.setAttribute('opacity', 1);
       }
+
+      // Inverser la visibilité du bâton cliqué
+      const isVisible = clickedElement.getAttribute('color') === 'black';
+      clickedElement.setAttribute('color', isVisible ? '#a3d0ed' : 'black');
+      clickedElement.setAttribute('opacity', isVisible ? 0.1 : 1); // Réglez l'opacité en fonction de la visibilité
+
+      // Mettre à jour le bâton actuellement sélectionné
+      this.currentHeldBaton = isVisible ? null : clickedElement;
+    }
   }
 });
