@@ -15,7 +15,16 @@ AFRAME.registerComponent('batongame', {
       { numBaton: 1, visible: false }
     ];
 
-    let positionX = -5.5;
+    // Position initiale du premier bâton
+    let positionX = 12.963; // Position X du deuxième bâton
+    let positionY = 0.983;
+    let positionZ = 11.707;
+
+    // Espacement horizontal entre les bâtons et les espaces vides
+    const espacementHorizontal = 0.02; // 20 cm de longueur de socle
+
+    // Largeur d'un bâton
+    const largeurBaton = 0.1; // 10 cm
 
     // Créer les bâtons et les espaces invisibles
     batonGroups.forEach((group, groupIndex) => {
@@ -24,7 +33,9 @@ AFRAME.registerComponent('batongame', {
         const batonId = `baton${i + 1 + groupIndex * 10}`; // Chaque groupe commence par 10
         const batonEl = document.createElement('a-box');
         batonEl.setAttribute('id', batonId);
-        batonEl.setAttribute('position', `${positionX} 1.5 0`);
+        batonEl.setAttribute('position', `${positionX} ${positionY} ${positionZ}`);
+        batonEl.setAttribute('rotation', '-86.408 -171.720 -146.134'); // Rotation du deuxième bâton
+        batonEl.setAttribute('scale', '0.341 0.216 0.522'); // Scale du deuxième bâton
         batonEl.setAttribute('width', '0.1');
         batonEl.setAttribute('height', '3');
         batonEl.setAttribute('depth', '0.1');
@@ -32,14 +43,16 @@ AFRAME.registerComponent('batongame', {
         batonEl.setAttribute('clickable', ''); // Rendre les bâtons cliquables
         sceneEl.appendChild(batonEl);
         batonEl.addEventListener('click', () => this.handleClick(batonEl));
-        positionX += 1;
+        positionX += largeurBaton + espacementHorizontal; // Espacement horizontal entre les bâtons
       }
 
       // Créer un espace invisible après chaque groupe de bâtons
       const emptySpaceId = `espace${groupIndex + 1}`;
       const emptySpaceEl = document.createElement('a-box');
       emptySpaceEl.setAttribute('id', emptySpaceId);
-      emptySpaceEl.setAttribute('position', `${positionX} 1.5 0`);
+      emptySpaceEl.setAttribute('position', `${positionX} ${positionY} ${positionZ}`);
+      emptySpaceEl.setAttribute('rotation', '-86.408 -171.720 -146.134'); // Utilisation de la même rotation que les bâtons
+      emptySpaceEl.setAttribute('scale', '0.341 0.216 0.522'); // Utilisation de la même mise à l'échelle que les bâtons
       emptySpaceEl.setAttribute('width', '0.1');
       emptySpaceEl.setAttribute('height', '3');
       emptySpaceEl.setAttribute('depth', '0.1');
@@ -49,7 +62,7 @@ AFRAME.registerComponent('batongame', {
       sceneEl.appendChild(emptySpaceEl);
       emptySpaceEl.addEventListener('click', () => this.handleClick(emptySpaceEl));
 
-      positionX += 1; // Espacement entre les groupes de bâtons
+      positionX += largeurBaton + espacementHorizontal; // Espacement entre les groupes de bâtons
     });
 
     // Ajouter l'événement de clic au composant A-Frame lui-même
@@ -57,7 +70,7 @@ AFRAME.registerComponent('batongame', {
   },
 
   handleClick: function (clickedElement) {
-    console.log('handleClick');        
+    console.log('handleClick');
       // Si aucun bâton n'est actuellement sélectionné
       if (!this.currentHeldBatonId) {
         // Si l'élément cliqué est un bâton et qu'il est cliquable

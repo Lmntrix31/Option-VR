@@ -122,19 +122,7 @@
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
-          
-          <dt>
-            <a href="https://www.cgtrader.com/free-3d-models/plant/other/low-poly-forest-pack-f02e240d-8646-4b91-bd3d-731101f35f90" target="_blank">low poly forest pack Free low-poly 3D model
-
-</a>
-          </dt><dd>
-            by <a href="https://www.cgtrader.com/designers/genctasarimci" target="_blank">YOUNG DESİGNER
-</a>
-            under <a href="https://www.cgtrader.com/pages/terms-and-conditions#general-terms-of-licensing" target="_blank">General Terms and Conditions
-</a>
-          </dd>
-
-          
+               
           <dt>
             <a href="https://sketchfab.com/3d-models/stylized-tree-843278c62cb9494bafda67e7c14c5707" target="_blank">Stylized Tree
 
