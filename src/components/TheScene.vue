@@ -7,6 +7,9 @@ import TheJungle from './TheJungle.vue';
   //import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
  // import '../aframe/pavageCarre.js';
   import '../aframe/batonGame.js';
+  import '../aframe/cylinderGame.js';
+
+
 
   defineProps({
     scale: Number,
@@ -21,7 +24,7 @@ const allAssetsLoaded = ref(false);
 
 
 <template>
-  <a-scene stats background="color: #000000" fog="type: linear; color: #00001; near: 30; far: 60" batongame>
+  <a-scene stats background="color: #000000" fog="type: linear; color: #00001; near: 30; far: 60" batongame cylindergame >
 
     <a-assets  @loaded="allAssetsLoaded = true">
       <a-asset-item id="jungle" src="assets/jungleMap.glb"></a-asset-item>
@@ -29,6 +32,7 @@ const allAssetsLoaded = ref(false);
       <a-asset-item id="sound" response-type="arraybuffer" src="assets/soundJungle-2.mp3" preload="auto"></a-asset-item>
 
       <a-asset-item id="sound-2" response-type="arraybuffer" src="assets/GorillaSound.mp3" preload="auto"></a-asset-item>
+      <a-asset-item id="sound-3" response-type="arraybuffer" src="assets/jumanji_drum_beat.mp3" preload="auto"></a-asset-item>
 
 
     </a-assets>
