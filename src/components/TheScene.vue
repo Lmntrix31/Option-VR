@@ -21,7 +21,7 @@ const allAssetsLoaded = ref(false);
 
 
 <template>
-  <a-scene stats background="color: #000000" fog="type: linear; color: #a3d0ed; near: 30; far: 60" batongame>
+  <a-scene stats background="color: #000000" fog="type: linear; color: #00001; near: 30; far: 60" batongame>
 
     <a-assets  @loaded="allAssetsLoaded = true">
       <a-asset-item id="jungle" src="assets/jungleMap.glb"></a-asset-item>
