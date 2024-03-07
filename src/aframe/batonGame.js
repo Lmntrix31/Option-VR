@@ -105,7 +105,7 @@ AFRAME.registerComponent('batongame', {
         // Affichage du message de félicitations
         const messageEl = document.createElement('a-entity');
         messageEl.setAttribute('text', {
-          value: 'Félicitation!',
+          value: 'Felicitations!',
           color: 'white',
           width: 4,
           align: 'center',
