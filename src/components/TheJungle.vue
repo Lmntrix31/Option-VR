@@ -42,7 +42,7 @@
 ></a-entity>
 
 <a-entity id="text-jeux1"
-  text="value: Ce jeu est simple : en lisant de gauche à droite, vous verrez une suite de bâtons dans l'ordre 4, 3, 2, 1. Vous pouvez déplacer un seul bâton à la fois en cliquant dessus et cliquez sur les espaces vides. Le but est de reformer la même suite, mais inversée, toujours en lisant de gauche à droite : 1, 2, 3, 4.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
+  text="value: Ce jeu est simple : en lisant de gauche à droite, vous verrez une suite de bâtons dans l'ordre 4, 3, 2, 1. Vous pouvez cliquer un seul bâton à la fois en cliquant dessus et cliquez sur les espaces vides. Le but est de reformer la meme suite, mais inversée, toujours en lisant de gauche à droite : 1, 2, 3, 4.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
   position="12.033 1.512 10.262"
   scale="0.566 0.643 1.730"
   rotation="0 45 0"
@@ -56,7 +56,7 @@
 ></a-entity>
 
 <a-entity id="text-jeux3"
-  text="value: La figure ci-dessous represente une pelle. Une boule rouge se trouve dans la pelle.Comment faire sortir la boule rouge de la pelle en ne deplaçant que 2 allumettes ?Précisions : interdiction de toucher la boule rouge et la pelle doit avoir la meme forme apres le deplacement bien-sur.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
+  text="value: La figure ci-dessous represente une pelle. Une boule rouge se trouve dans la pelle.Comment faire sortir la boule rouge de la pelle en ne clliquant que sur2 batons dans les espaces vides ?Précisions : interdiction de toucher la boule rouge et la pelle doit avoir la meme forme apres le deplacement bien-sur.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
   position="10.609 1.504 -15.232"
   scale="0.505 0.631 2.623"
   rotation="0 -45.850 0"
