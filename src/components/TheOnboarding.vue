@@ -1,11 +1,14 @@
 <script setup>
   import { ref } from 'vue';
 
+
   defineProps({
     loaded: Boolean,
   });
 
+
   const showOnboarding = ref(true);
+
 
   function enterScene() {
     showOnboarding.value = false;
@@ -14,16 +17,24 @@
     }
     document.querySelector('a-scene').emit('enter-scene');
   }
+
+
 </script>
 
 <template>
   <div id="onboarding" v-if="showOnboarding">
     <div>
-      <h1>A-Frame + Vite + Vue Boilerplate</h1>
+      <h1>Welcome to the Jungle</h1>
       <p v-if="!loaded">loading...</p>
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
         <section>
+          <h4>Instructions</h4>
+          <p>
+            Bienvenue au cœur de la jungle. Pour échapper à cet environnement, vous devez démêler les énigmes qui se dressent devant vous. Aucun indice ne sera délivré. Les panneaux vous guideront vers les emplacements des défis. Commencez par ceux situés à l'extérieur, au nombre de trois, puis dirigez-vous vers le temple où une personne vous attend. Après avoir triomphé des épreuves, vous pourrez enfin retrouver votre chemin vers chez vous. Attention, les animaux sont omniprésents, soyez sur vos gardes.
+
+
+          </p>
           <h4>Movement modes support</h4>
           <ul>
             <li>
@@ -198,11 +209,43 @@
             by <a href="https://sketchfab.com/carlossamuelariza" target="_blank">Carlos</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
+ 
+          <dt>
+            <a href="https://sketchfab.com/3d-models/room-f182776a84b04447a2bb006b80d42a0e" target="_blank">Room
 
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/shedmon" target="_blank">Shedmon</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          <dt>
+            <a href="https://sketchfab.com/3d-models/bedroom-1f4ac48a094d40ada37bfe857ce4b581" target="_blank">Bedroom
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/EngyElshair" target="_blank">EngyElshair</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/picture-frames-7972059512f241fa85a644bcdf5fa40f" target="_blank">Picture Frames
+
+</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/elnahue" target="_blank">ElNahue</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
         </dl>
       </div>
     </div>
   </div>
+  
+
+ 
 </template>
 
 <style scoped>
@@ -258,8 +301,9 @@
     border: none;
     cursor: pointer;
   }
-</style>#onboarding li {
+
 #onboarding li {
   font-size: 1rem;
   text-align: left;
 }
+</style>

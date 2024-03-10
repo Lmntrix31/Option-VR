@@ -1,6 +1,7 @@
 <script setup>
   import { ref } from 'vue';
   import '../aframe/listen-to.js';
+  import PortalTeleporter from './PortalTeleporter.vue';
 
 
 
@@ -23,23 +24,26 @@
       sound__2="src: #sound-2; positional: false; on: play-sound; delay: 10000; volume: 0.2; loop: true;"
       ></a-entity>
 
+  
+<!-- 
   <a-box
   id="box-intro"
   position="0 3.052 -5"
-  scale="10.888 4 0.1"
+  scale="8.821 2.850 0.1"
   visible="false"
   material="color: #000000; opacity: 0.5"
-  animation__show="property: visible; to: true; delay: 500; dur: 1000"
+  animation__show="property: visible; to: true; delay: 1000; dur: 1000"
   animation__hide="property: visible; to: false; delay: 30000; dur: 1000"
 ></a-box>
 
       <a-entity id="text-intro"
   text="value: Welcome to the Jungle \n\nPour pouvoir sortir d'ici tu dois resoudre les enigmes. Il n'y aura pas d'indices. Pour savoir ou sont les jeux regarde les pancartes. Attention, les animaux sont partout.; wrapCount: 40; color: white; width: 10;"
   position="0.362 3.047 -4.914"
+  scale="0.806 0.787 1"
   visible="false"
-  animation__show="property: visible; to: true; delay: 500; dur: 1000"
+  animation__show="property: visible; to: true; delay: 1000; dur: 1000"
   animation__hide="property: visible; to: false; delay: 30000; dur: 1000"
-></a-entity>
+></a-entity> -->
 
 <a-entity id="text-jeux1"
   text="value: Ce jeu est simple : en lisant de gauche à droite, vous verrez une suite de bâtons dans l'ordre 4, 3, 2, 1. Vous pouvez cliquer un seul bâton à la fois en cliquant dessus et cliquez sur les espaces vides. Le but est de reformer la meme suite, mais inversée, toujours en lisant de gauche à droite : 1, 2, 3, 4.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
@@ -56,10 +60,17 @@
 ></a-entity>
 
 <a-entity id="text-jeux3"
-  text="value: La figure ci-dessous represente une pelle. Une boule rouge se trouve dans la pelle.Comment faire sortir la boule rouge de la pelle en ne clliquant que sur2 batons dans les espaces vides ?Précisions : interdiction de toucher la boule rouge et la pelle doit avoir la meme forme apres le deplacement bien-sur.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
+  text="value: La figure ci-dessous represente une pelle. Une boule rouge se trouve dans la pelle. Pour sortir la boule rouge de la pelle il faut clliquer que sur 2 batons a l'aide des espaces vides ?Précisions : la pelle doit avoir la meme forme apres le deplacement.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
   position="10.609 1.504 -15.232"
   scale="0.505 0.631 2.623"
   rotation="0 -45.850 0"
+></a-entity>
+
+<a-entity id="text-jeux4"
+  text="value: Corrigez l'équation en deplaçant un seul baton sur les espaces vides.\n Bonne Chance!; wrapCount: 40; color: white; width: 2; lineHeight: 50; letterSpacing: 5;"
+  position="-16.881 1.552 -14.134"
+  scale="0.542 0.759 2.623"
+  rotation="0 131.089 0"
 ></a-entity>
 
 
