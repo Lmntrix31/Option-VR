@@ -37,6 +37,8 @@
 
 ### Solutions Games
 
+https://github.com/Lmntrix31/Option-VR/blob/welcomeToTheJungle-2/Quick%20sheets.pdf
+
 ## Quickstart
 
 ### Create a folder for your project and move to it
