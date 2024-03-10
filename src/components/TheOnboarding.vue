@@ -8,6 +8,7 @@
 
 
   const showOnboarding = ref(true);
+  let jungleSound;
 
 
   function enterScene() {
@@ -16,8 +17,20 @@
       document.querySelector('a-scene').enterVR();
     }
     document.querySelector('a-scene').emit('enter-scene');
+
+    if (jungleSound) {
+      jungleSound.pause(); // Mettre en pause la lecture du son s'il est en cours
+      jungleSound.currentTime = 0; // Réinitialiser la position de lecture à 0
+    }
   }
 
+  function startSound() {
+    if (!jungleSound) {
+      jungleSound = new Audio('/welcomeToTheJungle-2/assets/drum_beat.mp3');
+      jungleSound.loop = true;
+      jungleSound.play(); // Démarrer la lecture du son
+    }
+  }
 
 </script>
 
@@ -26,6 +39,8 @@
     <div>
       <h1>Welcome to the Jungle</h1>
       <p v-if="!loaded">loading...</p>
+      <button v-if="loaded" @click="startSound()">Start Sound</button>
+
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
         <section>
